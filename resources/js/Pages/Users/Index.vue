@@ -24,7 +24,10 @@ watch(search, value => {
     <Head title="Users"/>
 
     <div class="flex justify-between mb-6">
-        <h1 class="text-2xl">Users</h1>
+        <div class="flex items-center">
+            <h1 class="text-2xl">Users</h1>
+            <Link class="ml-2 text-blue-300 text-xl" href="/users/create">New user</Link>
+        </div>
         <input v-model="search" type="text" placeholder="Search..." class="border px-2 rounded-lg">
     </div>
 
