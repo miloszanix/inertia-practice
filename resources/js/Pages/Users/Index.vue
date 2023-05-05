@@ -21,8 +21,16 @@ watch(search, throttle(value => {
 
 </script>
 
+<script>
+import Layout from '@/Layouts/Layout.vue'
+
+export default {
+    layout: Layout
+}
+</script>
+
 <template>
-    <Head title="Users"/>
+    <Head title="Users" />
 
     <div class="flex justify-between mb-6">
         <div class="flex items-center">
@@ -38,23 +46,23 @@ watch(search, throttle(value => {
                 <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
                     <table class="min-w-full divide-y divide-gray-200">
                         <tbody class="bg-white divide-y divide-gray-200">
-                        <tr v-for="user in users.data" :key="user.id">
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div class="flex items-center">
-                                    <div>
-                                        <div class="text-sm font-medium text-gray-900">
-                                            {{ user.name }}
+                            <tr v-for="user in users.data" :key="user.id">
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div>
+                                            <div class="text-sm font-medium text-gray-900">
+                                                {{ user.name }}
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </td>
+                                </td>
 
-                            <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                <Link :href="`/users/${user.id}/edit`" class="text-indigo-600 hover:text-indigo-900">
+                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                    <Link :href="`/users/${user.id}/edit`" class="text-indigo-600 hover:text-indigo-900">
                                     Edit
-                                </Link>
-                            </td>
-                        </tr>
+                                    </Link>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>

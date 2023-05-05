@@ -1,7 +1,6 @@
 <script setup>
 
 import NavLink from './NavLink.vue';
-import { Link } from '@inertiajs/vue3';
 
 </script>
 
@@ -12,10 +11,13 @@ import { Link } from '@inertiajs/vue3';
                 <NavLink href="/" :active="$page.component == 'Home'">Home</NavLink>
             </li>
             <li>
-                <NavLink href="/users" :active="$page.component == 'Users'">Users</NavLink>
+                <NavLink href="/users" :active="$page.component == 'Create'">Users</NavLink>
             </li>
             <li>
                 <NavLink href="/settings" :active="$page.component == 'Settings'">Settings</NavLink>
+            </li>
+            <li>
+                <NavLink href="/logout" method="post">Logout</NavLink>
             </li>
         </ul>
     </nav>
