@@ -21,7 +21,8 @@ This project is a web application built using the Laravel and Vue.js frameworks,
 4. Configure the database settings in the `.env` file
 5. Generate an application key: `php artisan key:generate`
 6. Migrate the database: `php artisan migrate`
-7. Build the frontend assets: `npm run dev`
+7. Build the frontend assets: `npm run build`
+8. Start frontend development server instance: `npm run dev`
 
 ## Usage
 1. Start the local development server: `php artisan serve`
